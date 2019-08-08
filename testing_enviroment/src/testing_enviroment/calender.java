@@ -65,6 +65,7 @@ public class calender {
 
 	}
 	public static void main(String[] args) throws IOException, ParseException {
+		System.out.println("This is our calender program to find out day");
 		calender cal=new calender();
 		cal.userinput();
 		cal.logic();
