@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My_Suite">
+	<test name="Practice_Grouping">
+		<groups>
+			<define name="All">
+				<include name="car" />
+				<include name="scooter" />
+			</define>
+			<run>
+				<include name="scooter" />
+
+			</run>
+
+		</groups>
+
+		<classes>
+
+			<class name="testing_enviroment.helloworld" />
+
+		</classes>
+
+	</test>
+
+</suite>
