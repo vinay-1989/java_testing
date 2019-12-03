@@ -25,6 +25,7 @@ public class calender {
 	static int z=0;
 
 	public void userinput() {
+		System.out.println("please Enter  date in the format: dd/mm/yy");
 		Scanner scan=new Scanner(System.in);
 		date=scan.next();
 		String[] split=date.split("/");

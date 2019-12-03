@@ -1,0 +1,19 @@
+{
+"key": "BEA2-55EF-603A-40D7-A27F-B767-D0B9-8A72",
+"data": [{
+"field": "",
+"text": "value",
+"sep": "", 
+"qual": "1",
+"op": "0",
+"inln": "",
+"category": "general",
+"Url": "",
+"Name": "",
+"CssStyle": ""
+}
+],
+"lang": ["hindi"],
+"categories":"",
+ 	"recid": "0ii8p"	
+}

@@ -22,6 +22,7 @@ public class life_Eweb {
 		
 		
 		WebDriver driver=new ChromeDriver();
+		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("http://bg-dev.eweblife.com/prm/bgbtw/rsvp-signup/apply?record=826");
 		driver.manage().window().maximize();

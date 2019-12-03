@@ -1,11 +1,18 @@
 import java.awt.AWTException;
+import java.awt.Image;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.awt.image.RenderedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import javax.imageio.ImageIO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchWindowException;
@@ -16,21 +23,44 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.asprise.ocr.Ocr;
+import com.asprise.util.ocr.OCR;
+
 public class Eweb_life {
 	static WebDriver driver;
 
 	@Test(priority=0)
-	public void openbrowser() throws InterruptedException {
+	public void openbrowser() throws InterruptedException, IOException {
 		System.setProperty("webdriver.ie.driver", "A:\\selenium_projects\\jars\\IE_driver\\IEDriverServer.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 		capabilities.setCapability("requireWindowFocus", true);
 		driver=new InternetExplorerDriver(capabilities);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.get("http://bg-dev.eweblife.com/prm/bgbtw/rsvp-signup/apply?record=826");
+//		driver.get("https://ewumoney.xyz/5228361344221/");
+    driver.get("http://bg-dev.eweblife.com/prm/bgbtw/rsvp-signup/apply?record=826");
 		driver.manage().window().maximize();
+		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"memberlogin\"]/div[1]/a[1]/u")).click();
+//		driver.findElement(By.id("username")).sendKeys("prithivi10");
+//		driver.findElement(By.id("email")).sendKeys("mes.prithivi02@gmail.com");
+//		driver.findElement(By.id("password1")).sendKeys("megha@shiter23");
+//		driver.findElement(By.id("password2")).sendKeys("megha@shiter23");
+//		Thread.sleep(11000);
+//		driver.findElement(By.xpath("//*[@id=\"main\"]/form/table/tbody/tr[12]/td/div/a/img")).click();
+	//	String imgpath=driver.findElement(By.xpath("//*[@id=\"main\"]/form/table/tbody/tr[10]/td[1]/div/b/img")).getAttribute("src");
+		 
+//		 Ocr.setUp(); // one time setup
+//		    Ocr ocr = new Ocr(); // create a new OCR engine
+//		    ocr.startEngine("eng", Ocr.SPEED_FASTEST); // English
+//		    String s = ocr.recognize(new File[] {new File("C:\\Users\\vinay.rao\\Desktop\\download.jpg")},
+//		      Ocr.RECOGNIZE_TYPE_ALL, Ocr.OUTPUT_FORMAT_PLAINTEXT);
+//		    System.out.println("Result: " + s);
+//		    ocr.stopEngine();
+		 
+		 
 	}
-	@Test//(priority=2)
+	//@Test//(priority=2)
 	public void validate_field() throws InterruptedException {
 
 		//		//Click on the submit button without filling any field
@@ -47,7 +77,7 @@ public class Eweb_life {
 		}
 	}
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void fill_detail() throws InterruptedException, AWTException {
 
 		driver.findElement(By.id("field_12052")).sendKeys("Vinay");
@@ -87,16 +117,16 @@ public class Eweb_life {
 		robot.delay(150);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
-		//driver.findElement(By.xpath("//*[@id=\"applicationPage\"]/div[26]/div[2]/label[2]/input[2]")).click();
-		//			Select ticket=new Select(driver.findElement(By.id("section_674_745")));
-		//			ticket.selectByVisibleText("2");
-		//			driver.findElement(By.name("password")).sendKeys("Azyxw@123");
-		//			driver.findElement(By.name("confirm_password")).sendKeys("Azyxw@123");
-		//			Select security_ques=new Select(driver.findElement(By.name("security_question_id")));
-		//			security_ques.selectByValue("8");
-		//			driver.findElement(By.name("security_answer")).sendKeys("vihu");
-		//			//click on the submit button
-		//			driver.findElement(By.cssSelector(".center .form_btn.submit")).click();
+		driver.findElement(By.xpath("//*[@id=\"applicationPage\"]/div[26]/div[2]/label[2]/input[2]")).click();
+					Select ticket=new Select(driver.findElement(By.id("section_674_745")));
+					ticket.selectByVisibleText("2");
+					driver.findElement(By.name("password")).sendKeys("Azyxw@123");
+					driver.findElement(By.name("confirm_password")).sendKeys("Azyxw@123");
+					Select security_ques=new Select(driver.findElement(By.name("security_question_id")));
+					security_ques.selectByValue("8");
+					driver.findElement(By.name("security_answer")).sendKeys("vihu");
+					//click on the submit button
+					driver.findElement(By.cssSelector(".center .form_btn.submit")).click();
 
 	}
 }
