@@ -1,0 +1,18 @@
+{
+ "key": "7EAE-37E3-4448-48F2-BFE9-8F02-B5A1-ADC3",
+  "data": [{
+  "field": "",
+    "text":"mytext",
+  "qual": "2",
+  "op": "1",
+  "inln": "English",
+  "Url" : "",
+   "category": ""
+        }],
+   
+   "lang": ["hindi"],
+   "categories": "",
+   "QAmode": true,
+   "priority": null,
+  "recid" : "kpmg"
+}
