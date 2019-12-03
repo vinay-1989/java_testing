@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="786" started-at="2019-09-11T07:09:59Z" finished-at="2019-09-11T07:10:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="786" started-at="2019-09-11T07:09:59Z" finished-at="2019-09-11T07:10:00Z">
+      <class name="guru99demo_project.Cric10">
+        <test-method status="PASS" signature="extract_link()[pri:4, instance:guru99demo_project.Cric10@3d921e20]" name="extract_link" duration-ms="755" started-at="2019-09-11T07:09:59Z" finished-at="2019-09-11T07:10:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extract_link -->
+      </class> <!-- guru99demo_project.Cric10 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

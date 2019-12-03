@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All suit]">
+  <test thread-count="5" name="test2(failed)">
+    <classes>
+      <class name="guru99demo_project.payment_gateway">
+        <methods>
+          <include name="openbrowser"/>
+        </methods>
+      </class> <!-- guru99demo_project.payment_gateway -->
+    </classes>
+  </test> <!-- test2(failed) -->
+</suite> <!-- Failed suite [All suit] -->
